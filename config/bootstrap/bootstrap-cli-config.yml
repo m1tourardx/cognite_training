@@ -91,7 +91,7 @@ bootstrap:
               - cdf-group: cdf:uc:001:oee:read
                 idp-source-id: a8e0daf0-e3a1-487a-8a3b-7c4b14e03268
                 idp-source-name: bootcamp-55-prod-uc-001-oee-read
-              
+
 
 
     namespaces:
@@ -101,21 +101,21 @@ bootstrap:
 
           # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
           ns-nodes:
-            - node-name: src:001:sap
-              description: Source 01 data from SAP
-            - node-name: src:002:opcua
-              description: Source 02 data from opcua # HINT
+              - node-name: src:001:sap
+                description: Source 01 data from SAP
+              - node-name: src:002:opcua
+                description: Source 02 data from opcua # HINT
         # HINT: Add another namespace below
         - ns-name: uc
           description: Use cases representing the data/products
-        
+
           ns-nodes:
-            - node-name: uc:001:oee
-              description: Use case 001 Over all Equipment effectiveness
-              shared-access:
-                read:
-                    - node-name: src:001:sap
-                    - node-name: src:002:opcua
+              - node-name: uc:001:oee
+                description: Use case 001 Over all Equipment effectiveness
+                shared-access:
+                    read:
+                        - node-name: src:001:sap
+                        - node-name: src:002:opcua
 
 
 # de-facto standards for CDF CogniteClient and logger configuration.
